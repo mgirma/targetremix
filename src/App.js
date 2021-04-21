@@ -1,10 +1,27 @@
+import Hero from "./components/hero";
+import Tiles from "./components/tiles";
 import "./styles.css";
+import targetPic from "../src/public/target.png";
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <img id="tracingImage" src={targetPic} alt="cat" />
+      {/*
+        Good Job today team! - Edgar
+        Thank you for committing the code!
+
+        ****
+        You both can type here
+        ****
+
+
+        
+      */}
+      <div className="tracingPlaceholder">
+        <Hero />
+        <Tiles />
+      </div>
     </div>
   );
 }

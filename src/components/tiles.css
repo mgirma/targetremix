@@ -1,6 +1,6 @@
-.tiles{
-  background-color: rgb(17, 120, 209); 
-height: 155px;
-width:635px; 
-margin-bottom: 15px;
+.tiles {
+  background-color: rgba(17, 120, 209, 0.3);
+  height: 185px;
+  width: 635px;
+  margin-bottom: 15px;
 }

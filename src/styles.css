@@ -1,4 +1,19 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  height: 1200px;
+}
+
+.tracingPlaceholder {
+  position: absolute;
+  top: 44px;
+  left: 194px;
+}
+
+#tracingImage {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1024px;
 }
