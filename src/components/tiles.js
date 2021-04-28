@@ -3,10 +3,17 @@
 import "./tiles.css";
 
 let dataModel = {
-  tiles: {
-    productName: "p",
-    price: 8
-  }
+  tiles: [
+    {
+      productName: "microwave",
+
+      price: 1
+    },
+    {
+      productName: "coffeemaker",
+      price: 2
+    }
+  ]
 };
 
 /* 
@@ -29,11 +36,23 @@ that is an expression
 */
 
 export default function Tiles() {
-console.log(dataModel.tiles.price)
+  var tile1 = dataModel.tiles[0];
+  var tile2 = dataModel.tiles[1];
+  var theNameOfTheThingWeNeed = "price";
+
+  console.log(
+    "price 1",
+    tile1.price,
+    "price 2",
+    tile2["price"],
+    "price 2",
+    tile2[theNameOfTheThingWeNeed]
+  );
+
   return (
     <div className="tiles">
       <div className="tile">
-        {1 + 1}
+        <div className="pricebox">{dataModel.tiles[0].price}</div>
       </div>
     </div>
   );

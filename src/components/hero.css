@@ -1,5 +1,22 @@
 .hero {
-background-color: rgb(226, 28, 226, 0.5);
-width:635px;
-height:238px;
-  }
+  /* background-color: rgb(226, 28, 226, 0.5); */
+  width: 635px;
+  height: 259px;
+}
+
+.background {
+  position: absolute;
+  top: 47px;
+  left: 46px;
+  background-color: rgba(255, 255, 0, 0.3);
+  width: 162px;
+  height: 190px;
+}
+
+.caption {
+  top: 100px;
+  left: 60px;
+  background-color: pink;
+  width: 200px;
+  height: 10px;
+}
