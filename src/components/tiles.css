@@ -12,6 +12,7 @@
   margin-top: 17px;
   width: 137px;
   height: 138px;
+  display: inline-block;
 }
 .pricebox {
   background-color: blueviolet;
