@@ -11,9 +11,9 @@ import "./hero.css";
  */
 let dataModel = {
   hero: {
-    header: "Your perfect patio",
-    buttonText: "Patio and Garden",
-    subtitle: "Outdoor looks in favorite stylese"
+    header: "Your <br>perfect<br> patio",
+    buttonText: "Patio & Garden",
+    subtitle: "Outdoor looks in favorite styles"
   }
 };
 
@@ -22,12 +22,25 @@ var header = dataModel.hero.header;
 var buttonText = dataModel.hero.buttonText;
 var subtitle = dataModel.hero.subtitle;
 export default function Hero() {
+  function formoreinfo() {
+    console.log("give more info");
+  }
   return (
     <div className="hero">
       <div className="background">
-        <h1 className="title">{header}</h1>
-        <h2 className="caption">{subtitle}</h2>
-        <button className="square">{buttonText}</button>
+        <div className="title">
+          Your
+          <br />
+          perfect
+          <br /> patio
+        </div>
+        <div className="caption">
+          Outdoor looks in <br />
+          favorite styles
+        </div>
+        <div className="square" onClick={formoreinfo}>
+          {buttonText}
+        </div>
       </div>
     </div>
   );

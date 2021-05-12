@@ -15,9 +15,28 @@
 }
 
 .caption {
-  top: 100px;
-  left: 60px;
-  background-color: pink;
-  width: 200px;
+  /*top: 100px;
+ /*left: 60px;
+  width: 200px;*/
   height: 10px;
+}
+.title{
+text-align:center;
+font-size: 28px;
+margin-top: 19px;
+line-height:0.9em;
+overflow: hidden;
+}
+
+.caption{
+    text-align:center;
+    font-size: 15px;
+    height: 40px;
+    
+
+}
+
+.square{
+font-size: 10px;
+margin-top:9px;
 }
