@@ -6,7 +6,6 @@ let dataModel = {
   tiles: [
     {
       productName: "microwave",
-
       price: 40
     },
     {
@@ -17,6 +16,10 @@ let dataModel = {
     {
       productName: "shirt",
       price: 20
+    },
+    {
+      productName: "cookies",
+      price: 10
     }
   ]
 };
@@ -43,13 +46,7 @@ that is an expression
 function example(fruit) {
   // function name
   // params (a.k.a. "function signature" -- this is where you name your params
-} // function body
 
-example("orange");
-example("apple");
-
-// This is your Component "declaration" -- here you explain what your components is with code
-function Item(props) {
   let test = {
     example: "object contents"
   };
@@ -58,9 +55,9 @@ function Item(props) {
   // below are console logs showing your CUSTOM props!
   // to get things "out" of props, use "dot notation"
   // price lives INSIDE of props
-  console.log(props.price);
+  // console.log(props.price);
   // product lives INSIDE of props
-  console.log(props.product);
+  // console.log(props.product);
 
   // React will give you a param named "props" which is an object
   // THIS IS A REACT *FUNCTION* COMPONENT
@@ -68,14 +65,36 @@ function Item(props) {
     everything is trapped in the func,
     until you return it to whoever called it
   */
+} // function body
+
+example("orange");
+example("apple");
+
+// This is your Component "declaration" -- here you explain what your components is with code
+function Item(props) {
   return (
     // whatever we "return" will be what "renders" on the screen
     <div className="tile">
       {/* prod ADD the product name here :-) */}
-      <div className="pricebox">{props.price}</div>
+
+      <div className="pricebox">
+        <div className="productName">{props.productName}</div>
+        {props.price}
+      </div>
     </div>
   );
 }
+
+/*
+  Example "Anatomy" of the object "path" we followed to get to price:
+  -> dataModel.tiles[3].price
+  <Item price={
+    dataModel // great-grandparent  -- this is an object
+    .tiles // granparent -- this is an array
+    [3] // parent -- this is the 4th item in the array
+    .price // this is the number we stroed in the price "property"
+  }/>
+*/
 
 function Tiles() {
   var tile1 = dataModel.tiles[0];
@@ -98,16 +117,29 @@ function Tiles() {
         // below are 2 html "attributes"
         // 1) "alt"
         // 2) "style"
-        alt="this is just for example"
+        alt="hey"
         style={{ display: "none" }}
         // in React, they use the name "props" when they mean "attributes"
       />
       {/* PUT A COMPONENT HERE */}
 
       {/* these are INSTANCES of the "ITEM" component*/}
-      <Item product="test" price={dataModel.tiles[0].price} />
-      <Item price={dataModel.tiles[1].price} />
-      <Item price={dataModel.tiles[2].price} />
+      <Item
+        productName={dataModel.tiles[0].productName}
+        price={dataModel.tiles[0].price}
+      />
+      <Item
+        productName={dataModel.tiles[1].productName}
+        price={dataModel.tiles[1].price}
+      />
+      <Item
+        productName={dataModel.tiles[2].productName}
+        price={dataModel.tiles[2].price}
+      />
+      <Item
+        productName={dataModel.tiles[3].productName}
+        price={dataModel.tiles[3].price}
+      />
 
       {/* PUT A COMPONENT HERE */}
     </div>

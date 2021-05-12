@@ -15,7 +15,7 @@
   display: inline-block;
 }
 .pricebox {
-  background-color: blueviolet;
+  background-color: rgba(138, 43, 226, 0.4);
   position: absolute;
   top: 1px;
   right: 10px;
