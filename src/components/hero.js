@@ -17,29 +17,31 @@ let dataModel = {
   }
 };
 
-console.log(dataModel.hero[0]);
+// console.log(dataModel.hero[0]);
 var header = dataModel.hero.header;
 var buttonText = dataModel.hero.buttonText;
 var subtitle = dataModel.hero.subtitle;
-export default function Hero() {
+export default function Hero(props) {
+  console.log(props.sender);
   function formoreinfo() {
     console.log("give more info");
+console.log(props.subTitle);
+console.log(props.buttonText);
   }
   return (
     <div className="hero">
       <div className="background">
         <div className="title">
-          Your
-          <br />
-          perfect
-          <br /> patio
+          <span dangerouslySetInnerHTML={{ __html: props.sender }} />
         </div>
         <div className="caption">
           Outdoor looks in <br />
           favorite styles
+          <span dangerouslySetInnerHTML={{ __html: props.subTitle }} />
         </div>
         <div className="square" onClick={formoreinfo}>
           {buttonText}
+          <span dangerouslySetInnerHTML={{ __html: props.buttonText }} />
         </div>
       </div>
     </div>
