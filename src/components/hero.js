@@ -21,9 +21,10 @@ console.log(dataModel.hero[0]);
 var header = dataModel.hero.header;
 var buttonText = dataModel.hero.buttonText;
 var subtitle = dataModel.hero.subtitle;
-export default function Hero() {
+export default function Hero(props) {
   function formoreinfo() {
     console.log("give more info");
+  props.showPopup()
   }
   return (
     <div className="hero">

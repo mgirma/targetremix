@@ -16,3 +16,13 @@
   left: 0;
   width: 1024px;
 }
+
+.Popup{
+width:500px;
+height:100px;
+background-color:rgba(0,0, 200, 0.70);
+position: absolute;
+top: 50px;
+left: 50%;
+margin-left: -250px;
+}
