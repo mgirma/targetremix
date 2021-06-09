@@ -9,7 +9,8 @@
   position: absolute;
   top: 47px;
   left: 46px;
-  background-color: rgba(255, 255, 0, 0.3);
+  /* background-color: rgba(255, 255, 255, 1); */
+  background-color: lightcyan;
   width: 162px;
   height: 190px;
 }
@@ -20,23 +21,21 @@
   width: 200px;*/
   height: 10px;
 }
-.title{
-text-align:center;
-font-size: 28px;
-margin-top: 19px;
-line-height:0.9em;
-overflow: hidden;
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 19px;
+  line-height: 0.9em;
+  overflow: hidden;
 }
 
-.caption{
-    text-align:center;
-    font-size: 15px;
-    height: 40px;
-    
-
+.caption {
+  text-align: center;
+  font-size: 15px;
+  height: 40px;
 }
 
-.square{
-font-size: 10px;
-margin-top:9px;
+.square {
+  font-size: 10px;
+  margin-top: 9px;
 }
