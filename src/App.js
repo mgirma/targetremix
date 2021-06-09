@@ -2,7 +2,7 @@ import { useState } from "react";
 import Hero from "./components/hero";
 import Tiles from "./components/tiles";
 import "./styles.css";
-import targetPic from "../src/public/target.png";
+import targetPic from "../public/target.png";
 
 export default function App() {
 const showBoxState= useState(false)
